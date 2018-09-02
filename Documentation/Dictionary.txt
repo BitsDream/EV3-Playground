@@ -1,0 +1,179 @@
+ev3.brickLightOff
+Definition
+The `brickLightOff` function turns the Brick Status Light off.
+
+ev3.brickLightOn
+Definition
+The `brickLightOn` function controls the Brick Status Light. The Brick Status Light surrounds the Brick Buttons on the face of the EV3 Brick. You can turn the Brick Status Light on in green, orange, or red; turn it off; or make it pulse on and off.
+
+ev3.display
+Definition
+The `display` function can display text anywhere on the EV3 Brick Display.
+
+ev3.displayCircle
+Definition
+The `displayCircle` function draws a circle on the Display.
+
+ev3.displayImage
+Definition
+The `displayImage` function draws a graphic image file. It lets you choose from the list of image files that are available on the EV3 Brick.
+
+ev3.displayLine
+Definition
+The `displayLine` function draws a straight line between any two points on the Display.
+
+ev3.displayPoint
+Definition
+The `displayPoint` function draws a single pixel on the Display.
+
+ev3.displayRectangle
+Definition
+The `displayRectangle` function draws a rectangle on the Display.
+
+ev3.measureGyroAngle
+Definition
+The `measureGyroAngle` function measures the angle using the Gyro Sensor. The angle is measured relative to the last time the sensor was reset.
+
+ev3.measureGyroRate
+Definition
+The `measureGyroRate` function measures the rotation rate in degrees per seconds using the Gyro Sensor.
+
+ev3.measureLightAmbient
+Definition
+The `measureLightAmbient` function measures the ambient light intensity using the Color Sensor.
+
+ev3.measureLightColor
+Definition
+The `measureLightColor` function detects colors using the Color Sensor.
+
+ev3.measureLightReflection
+Definition
+The `measureLightReflection` function measures the reflected light intensity using the Color Sensor.
+
+ev3.measureMotorDegrees
+Definition
+The `measureMotorDegrees` function measures the current motor rotation in degrees. The motor rotation is measured in degrees, relative to its position at the beginning of the program or since the sensor was last reset.
+
+ev3.measureMotorPower
+Definition
+The `measureMotorPower` function measures the current power level of the motor.
+
+ev3.measureMotorRotations
+Definition
+The `measureMotorRotations` function measures the current motor rotation in number of rotations. The motor rotation is measured in number of rotations, relative to the beginning of the program or since the sensor was last reset.
+
+ev3.measureTouch
+Definition
+The `measureTouch` function measures the state of the Touch Sensor. The Touch Sensor can either be Pressed or Released
+
+ev3.measureTouchCount
+Definition
+The `measureTouchCount` function measures the number of times the Touch Sensor has been bumped since the start of the program or since it was last reset.
+
+ev3.measureUltrasonicCentimeters
+Definition
+The `measureUltrasonicCentimeters` function measures the distance to an object, in centimeters, using the Ultrasonic Sensor.
+
+ev3.measureUltrasonicInches
+Definition
+The `measureUltrasonicInches` function measures the distance to an object, in inches, using the Ultrasonic Sensor.
+
+ev3.motorOff
+Definition
+The `motorOff` function turns the motor off. It is usually used to stop a motor that was started by the 'motorOn' function earlier in the program. If withBrake is "True", the motor is stopped immediately. The motor will be held in its stopped position until another function starts it, or until the program ends. If withBrake is "False", power to the motor is simply turned off. The motor will coast using any remaining momentum until it stops, or until another function starts.
+
+ev3.motorOn
+Definition
+The `motorOn` function controls a motor. You can turn a motor on or off, control its power level, or turn the motor on for a specified length of time or number of rotations. The 'motorOn' function turns the motor on, then immediately continues to the next block in the program unless the duration is specified by using the forSeconds, forDegrees or forRotations parameters. You can control the speed and direction of the motor using the withPower parameters. The motor will run until it is stopped or changed by another instruction later in the program, or until the program ends.
+
+ev3.move
+Definition
+The `move` function can make a robot drive forward, backward, turn, or stop. Use the 'move' function for robot vehicles that have two Large Motors, with one motor driving the left side of the vehicle and the other driving the right side. You can make the two motors move at different speeds or in different directions to make your robot turn. The 'move' function turns both motors on, then immediately continues to the next instruction in the program unless the duration is specified by using the forSeconds, forDegrees or forRotations parameters. You can control the speed and direction of the motors using the leftPower and rightPower parameters. The motors will run until they are stopped or changed by another instruction later in the program, or until the program ends.
+
+ev3.playSound
+Definition
+The `playSound` function plays sound using the speaker inside the EV3 Brick. You can play pre-recorded sound files or specify a musical note or tone.
+
+ev3.resetGyro
+Definition
+The `resetGyro` function allows you to reset the gyro counter.
+
+ev3.resetMotor
+Definition
+The `resetMotor` function allows you to reset the motor rotation counter.
+
+ev3.resetTouchCount
+Definition
+The `resetTouchCount` function allows you to reset the touch counter.
+
+ev3.stopMove
+Definition
+The `stopMove` function turns both motors off. Use the 'stopMove' function to stop a robot that was started by the 'move' function earlier in the program. If withBrake is "True", the motors are stopped immediately. The motors will be held in their stopped position until another function starts them, or until the program ends. If withBrake is "False", power to the motors is simply turned off. The motors will coast using any remaining momentum until they stop, or until another function starts.
+
+ev3.stopSound
+Definition
+The `stopSound` function stops any sound that is currently being played by the EV3 Brick. This is usually used to stop a sound that was started earlier in the program by a 'playSound' function that didn’t wait for the sound to complete.
+
+ev3.waitFor
+Definition
+The `waitFor` function lets your program wait for an amount of time, specified in seconds, before it moves on to the next instruction in the program.
+
+ev3.waitForGyroAngle
+Definition
+The `waitForGyroAngle` function lets your program wait for the angle to become either greater than or less than a desired Threshold Value before it moves on to the next instruction in the program.
+
+ev3.waitForGyroRate
+Definition
+The `waitForGyroRate` function lets your program wait for the rotation rate, measured in degrees per second, to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForLightAmbient
+Definition
+The `waitForLightAmbient` function lets your program wait for the measured ambient light intensity to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForLightColor
+Definition
+The `waitForLightColor` function lets your program wait until the Color Sensor detects a specified color, before it moves on to the next instruction in the program.
+
+ev3.waitForLightReflection
+Definition
+The `waitForLightReflection` function lets your program wait for the measured reflected light intensity to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForMotorDegrees
+Definition
+The `waitForMotorDegrees` function lets your program wait for the rotation of your motor, measured in degrees, to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForMotorPower
+Definition
+The `waitForMotorPower` function lets your program wait for the current power given to a motor to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForMotorRotations
+Definition
+The `waitForMotorRotations` function lets your program wait for the rotation of your motor, measured in number of rotations, to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForTouch
+Definition
+The `waitForTouch` function lets your program wait until the Touch Sensor is pressed, before it moves on to the next instruction in the program.
+
+ev3.waitForTouchCount
+Definition
+The `waitForTouchCount` function lets your program wait until the Touch Sensor has been bumped for a specified number of times, before it moves on to the next instruction in the program.
+
+ev3.waitForTouchReleased
+Definition
+The `waitForTouchReleased` function lets your program wait until the Touch Sensor is released, before it moves on to the next instruction in the program.
+
+ev3.waitForUltrasonicCentimeters
+Definition
+The `waitForUltrasonicCentimeters` function lets your program wait for the distance, measured in centimeters, to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForUltrasonicDecrease
+Definition
+The `waitForUltrasonicDecrease` function lets your program wait for the measured distance to decrease, before it moves on to the next instruction in the program.
+
+ev3.waitForUltrasonicInches
+Definition
+The `waitForUltrasonicInches` function lets your program wait for the distance, measured in inches, to become either greater than or less than a desired Threshold Value, before it moves on to the next instruction in the program.
+
+ev3.waitForUltrasonicIncrease
+Definition
+The `waitForUltrasonicIncrease` function lets your program wait for the measured distance to increase, before it moves on to the next instruction in the program.

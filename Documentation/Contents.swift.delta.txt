@@ -1,0 +1,127 @@
+    //# General Commands
+ev3.waitFor(seconds: 3)
+    //# Brick Comands
+    //## Brick Light Commands
+ev3.brickLightOn(withColor: BrickLightColor.red, inMode: BrickLightMode.flashing)
+ev3.brickLightOff()
+    //## Brick Sound Commands
+ev3.playSound(file: SoundFile.arm, atVolume: 100, withStyle: SoundStyle.waitForCompletion)
+ev3.playSound(note: Note.a4, forSeconds: 0.1, atVolume: 100)
+ev3.playSound(note: Note.a4, forSeconds: 0.1, atVolume: 100, waitForCompletion: true)
+ev3.playSound(frequency: 1000, forSeconds: 1, atVolume: 100)
+ev3.playSound(frequency: 1000, forSeconds: 1, atVolume: 100, waitForCompletion: true)
+    //## Brick Display Commands
+ev3.display(text: "HELLO")
+ev3.displayImage(named: ImageName.accept)
+ev3.displayImage(named: ImageName.accept, atX: 10, atY: 10, clearScreen: true)
+ev3.displayPoint(atX: 10, atY: 10, withColor: DisplayColor.black, clearScreen: true)
+ev3.display(text: "HELLO", atX: 10, atY: 10, withColor: DisplayColor.black, withFont: DisplayFont.normal, clearScreen: true)
+ev3.displayLine(fromX: 10, fromY: 10, toX: 100, toY: 100, withColor: DisplayColor.black, clearScreen: true)
+ev3.displayRectangle(atX: 10, atY: 10, length: 100, height: 100, withFill: true, withColor: DisplayColor.black, clearScreen: true)
+ev3.displayCircle(centerX: 100, centerY: 100, withRadius: 10, withFill: true, withColor: DisplayColor.black, clearScreen: true)
+
+    //#Sensor Commands
+    // ## Infrared Sensor - syncronous commands
+ev3.measureIRSeek(on: InputPort.one)
+ev3.measureIRProximity(on: InputPort.one)
+
+//## Infrared Sensor - asyncronous commands
+ev3.waitForIRSeekChange(on: InputPort.one)
+ev3.waitForIRSeek(on: InputPort.one, greaterThanOrEqualTo: 10)
+ev3.waitForIRProximity(on: InputPort.one, greaterThanOrEqualTo: 10)
+
+ev3.waitForIRProximityChange(on: InputPort.one)
+ev3.waitForIRSeek(on: InputPort.one, lessThanOrEqualTo: 10)
+ev3.waitForIRSeek(on: InputPort.one, greaterThanOrEqualTo: 10)
+
+    //## Ultrasonic Sensor - syncronous commands
+ev3.measureUltrasonicInches(on: InputPort.one)
+ev3.measureUltrasonicCentimeters(on: InputPort.one)
+
+    //## Ultrasonic Sensor - asyncronous commands
+ev3.waitForUltrasonicChange(on: InputPort.one)
+ev3.waitForUltrasonicDecrease(on: InputPort.one)
+ev3.waitForUltrasonicIncrease(on: InputPort.one)
+ev3.waitForUltrasonicInches(on: InputPort.one, lessThanOrEqualTo: 10)
+ev3.waitForUltrasonicInches(on: InputPort.one, greaterThanOrEqualTo: 10)
+ev3.waitForUltrasonicCentimeters(on: InputPort.one, lessThanOrEqualTo: 10)
+ev3.waitForUltrasonicCentimeters(on: InputPort.one, greaterThanOrEqualTo: 10)
+
+    //## Touch Sensor - synchronous commands
+ev3.measureTouch(on: InputPort.one)
+ev3.measureTouchCount(on: InputPort.one)
+
+    //## Touch Sensor - asynchronous commands
+ev3.waitForTouch(on: InputPort.one)
+ev3.waitForTouchReleased(on: InputPort.one)
+ev3.waitForTouchCount(on: InputPort.one, greaterThanOrEqualTo: 10)
+
+//Gyroscope Sensor - asynchronous Commands
+ev3.measureGyroRate(on: InputPort.one)
+ev3.measureGyroAngle(on: InputPort.one)
+
+//Gyroscope Sensor - asynchronous Commands
+ev3.waitForGyroRateChange(on: InputPort.one)
+ev3.waitForGyroRate(on: InputPort.one, lessThanOrEqualTo: Float)
+ev3.waitForGyroRate(on: InputPort.one, greaterThanOrEqualTo: Float)
+ev3.waitForGyroAngleChange(on: InputPort.one)
+ev3.waitForGyroAngle(on: InputPort.one, lessThanOrEqualTo: Float)
+ev3.waitForGyroAngle(on: InputPort.one, greaterThanOrEqualTo: Float)
+ev3.resetGyro(on: InputPort.[one, two, three, four])
+
+    //Sight Sensor - synchronous commands
+ev3.measureLightAmbient(on: InputPort.one)
+ev3.measureLightColor(on: InputPort.one)
+ev3.measureLightReflection(on: InputPort.one)
+
+    //Light Sensor - asynchronous commands
+ev3.waitForLightColor(on: InputPort.one, color: ColorValue.red)
+ev3.waitForLightColorChange(on: InputPort.one)
+
+ev3.waitForLightAmbient(on: InputPort.one, lessThanOrEqualTo: 10)
+ev3.waitForLightAmbient(on: InputPort.one, greaterThanOrEqualTo: 10)
+ev3.waitForLightAmbientChange(on: InputPort.one)
+
+ev3.waitForLightReflection(on: InputPort.one, lessThanOrEqualTo: 10)
+ev3.waitForLightReflection(on: InputPort.one, greaterThanOrEqualTo: 10)
+ev3.waitForLightReflectionChange(on: InputPort.one)
+
+
+    //Motor Commands
+ev3.motorOn(on: OutputPort.[a, b, c, d], withPower: Float)
+ev3.motorOn(forDegrees: Float, on: OutputPort.[a, b, c, d], withPower: Float)
+ev3.motorOn(forDegrees: Float, on: OutputPort.[a, b, c, d], withPower: Float, brakeAtEnd: Bool)
+ev3.motorOn(forSeconds: Float, on: OutputPort.[a, b, c, d], withPower: Float)
+ev3.motorOn(forSeconds: Float, on: OutputPort.[a, b, c, d], withPower: Float, brakeAtEnd: Bool)
+ev3.motorOn(forRotations: Float, on: OutputPort.[a, b, c, d], withPower: Float)
+ev3.motorOn(forRotations: Float, on: OutputPort.[a, b, c, d], withPower: Float, brakeAtEnd: Bool)
+
+ev3.motorOff(on: OutputPort.[a, b, c, d])
+ev3.motorOff(on: OutputPort.[a, b, c, d], brakeAtEnd: Bool)
+ev3.resetMotor(on: OutputPort.[a, b, c, d])
+
+ev3.waitForMotorDegreesChange(on: OutputPort.[a, b, c, d])
+ev3.waitForMotorDegrees(on: OutputPort.[a, b, c, d], greaterThanOrEqualTo: Float)
+ev3.waitForMotorDegrees(on: OutputPort.[a, b, c, d], lessThanOrEqualTo: Float)
+
+ev3.waitForMotorRotationsChange(on: OutputPort.[a, b, c, d][a, b, c, d])
+ev3.waitForMotorRotations(on: OutputPort.[a, b, c, d], lessThanOrEqualTo: Float)
+ev3.waitForMotorRotations(on: OutputPort.[a, b, c, d], greaterThanOrEqualTo: Float)
+
+ev3.waitForMotorPower(on: OutputPort.[a, b, c, d], lessThanOrEqualTo: Float)
+ev3.waitForMotorPower(on: OutputPort.[a, b, c, d], greaterThanOrEqualTo: Float)
+
+ev3.move(leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float)
+ev3.move(forDegrees: Float, leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float)
+ev3.move(forDegrees: Float, leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float, brakeAtEnd: Bool)
+ev3.move(forSeconds: Float, leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float)
+ev3.move(forSeconds: Float, leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float, brakeAtEnd: Bool)
+ev3.move(forRotations: Float, leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float)
+ev3.move(forRotations: Float, leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], leftPower: Float, rightPower: Float, brakeAtEnd: Bool)
+
+ev3.stopMove(leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d])
+ev3.stopMove(leftPort: OutputPort.[a, b, c, d], rightPort: OutputPort.[a, b, c, d], withBrake: Bool)
+
+ev3.measureMotorPower(on: OutputPort.[a, b, c, d])
+ev3.measureMotorDegrees(on: OutputPort.[a, b, c, d])
+ev3.measureMotorRotations(on: OutputPort.[a, b, c, d])
