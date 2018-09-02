@@ -1,1 +1,21 @@
-code goes here
+//Move forward and backwards four times
+
+func goForward() {
+    ev3.move(leftPort: .b, rightPort: .c, leftPower: 50, rightPower: 50)
+    ev3.waitForUltrasonicCentimeters(on: .four, lessThanOrEqualTo: 30)
+}
+func goBack() {
+    ev3.move(leftPort: .b, rightPort: .c, leftPower: -50, rightPower: -50)
+    ev3.waitForUltrasonicCentimeters(on: .four, greaterThanOrEqualTo: 100)
+}
+func main() {
+    ev3.resetMotor(on: .b)
+    ev3.resetMotor(on: .c)
+    ev3.playSound(file: .start, atVolume: 100, withStyle: .waitForCompletion)
+    for i in 1 ... 4 {
+        goForward()
+        goBack()
+    }
+    ev3.playSound(file: .stop, atVolume: 100, withStyle: .waitForCompletion)
+}
+main()
